@@ -1,110 +1,100 @@
 const express = require("express");
 const cors = require("cors");
+
 const app = express();
-const carData = {
-  honda: {
-    i8: {
-      model: "HONDA DUNK ",
-      image:
-        "https://images.khmer24.co/23-12-22/honda-dunk-50cc-2014-2018-45842170322940292070342-b.jpg",
-      price: "900$",
-    },
-    s5: {
-      model: "Honda beat",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "$1500",
-    },
-    x1: {
-      model: "X-ADV 750 ",
-      image:
-        "https://images.khmer24.co/23-12-26/x-adv-750-2021-2022-45842170356044117693961-b.jpg",
-      price: "$16,495",
-    },
-    i8: {
-      model: "HONDA XR230 ",
-      image:"https://images.khmer24.co/23-12-27/honda-xr230-124573170366457460119412-b.jpg",
-      price: "2000$",
-    },
-    s5: {
-      model: "Honda dream 2023",
-      image:
-        "https://images.khmer24.co/23-09-29/honda-dream2024-796016169596382721251826-b.jpg",
-      price: "$2700",
-    },
-    x1: {
-      model: "Super Cup ",
-      image:
-        "https://images.khmer24.co/23-12-27/--868534170366431094304484-b.jpg",
-      price: "$995",
-    },
-  },
-  yamaha: {
-    i8: {
-      model: "Yamaha R6 ",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "1600$",
-    },
-    s5: {
-      model: "YAMAHA N.MAX",
-      image:
-        "https://images.khmer24.co/23-12-27/yamaha-n-max-125cc-from-japan-year-2011-1370-have-id-card-922735170366304462493764-b.jpg",
-      price: "$1500",
-    },
-    x1: {
-      model: "XT 250cc ",
-      image:
-        "https://images.khmer24.co/23-10-01/xt-250cc-224887169614980957178948-b.jpg",
-      price: "$1495",
-    },
-    i8: {
-      model: "MXKING 2019",
-      image:"https://images.khmer24.co/23-12-20/mxking-2019-224887170305997358186586-b.jpg",
-      price: "1500$",
-    },
-    s5: {
-      model: "Yamaha MT150",
-      image:
-        "https://images.khmer24.co/23-12-26/yamaha-mt150-124573170357410298821011-b.jpg",
-      price: "$2900",
-    },
-    x1: {
-      model: "Yamaha R15 ",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "$1500",
-    },
-  },
-};
 
+// Middleware
 app.use(cors());
+app.use(express.json());
 
-app.get("/api/model/all", (req, res) => {
-  res.json({ carData });
+// ======================
+// Data
+// ======================
+const peopleData = [
+  {
+    id: 1,
+    uuid: "9f1c2c9e-9b6b-4e38-9b4f-7e8a3e9b4c21",
+    name: "ជា សុជាង",
+    nickname: "សម្លាញ់ សុជាង",
+  },
+  {
+    id: 2,
+    uuid: "4b9a8f3e-7a9c-4d2b-b1a7-21c91f8d5e11",
+    name: "នី ផានឹត",
+    nickname: "សម្លាញ់ ផានឹត",
+  },
+  {
+    id: 3,
+    uuid: "81f5b4cc-9b32-4fda-bc91-3a2e6d4b9f20",
+    name: "ផាត សុថាក់",
+    nickname: "សម្លាញ់ សុថាក់",
+  },
+  {
+    id: 4,
+    uuid: "d2e41a9c-0d87-4f21-a3cc-12a8b91f7c33",
+    name: "សែន វីរៈ",
+    nickname: "សម្លាញ់ វីរៈ",
+  },
+  {
+    id: 5,
+    uuid: "f7a1b2d9-6c3f-41b4-9e72-88a9c1d4e520",
+    name: "ហ៊ាន សីហា",
+    nickname: "ប្អូន សីហា",
+  },
+];
+
+// ======================
+// Routes
+// ======================
+
+// Get all people
+app.get("/api/people", (req, res) => {
+  res.json({
+    success: true,
+    data: peopleData,
+  });
 });
 
-app.get("/api/moto/:moto", (req, res) => {
-  const { moto } = req.params;
-  if (carData[moto]) {
-    const models = Object.keys(carData[moto]);
-    const cars = models.map((model) => carData[moto][model]);
-    res.json({ cars });
-  } else {
-    res.status(404).json({ error: "not found" });
+// Get person by ID
+app.get("/api/people/id/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const person = peopleData.find((p) => p.id === id);
+
+  if (!person) {
+    return res.status(404).json({
+      success: false,
+      message: "Person not found",
+    });
   }
+
+  res.json({
+    success: true,
+    data: person,
+  });
 });
 
-app.get("/api/cars/:car/:model", (req, res) => {
-  const { car, model } = req.params;
-  if (carData[car] && carData[car][model]) {
-    const modelDetails = carData[car][model];
-    res.json({ modelDetails });
-  } else {
-    res.status(404).json({ error: "Not Found" });
+// Get person by UUID
+app.get("/api/people/uuid/:uuid", (req, res) => {
+  const { uuid } = req.params;
+  const person = peopleData.find((p) => p.uuid === uuid);
+
+  if (!person) {
+    return res.status(404).json({
+      success: false,
+      message: "Person not found",
+    });
   }
+
+  res.json({
+    success: true,
+    data: person,
+  });
 });
 
-app.listen(5000, () => {
-  console.log("Server is running port 5000");
+// ======================
+// Server
+// ======================
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
