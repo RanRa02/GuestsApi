@@ -12,12 +12,6 @@ app.use(express.json());
 // ======================
 const peopleData = [
   {
-    id: 1,
-    uuid: "9f1c2c9e-9b6b-4e38-9b4f-7e8a3e9b4c21",
-    name: "ជា សុជាង",
-    nickname: "សម្លាញ់ សុជាង",
-  },
-  {
     id: 2,
     uuid: "4b9a8f3e-7a9c-4d2b-b1a7-21c91f8d5e11",
     name: "នី ផានឹត",
