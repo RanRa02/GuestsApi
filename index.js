@@ -12,35 +12,35 @@ app.use(express.json());
 // ======================
 const peopleData = [
   {
-    id: 1,
-    uuid: "9f1c2c9e-9b6b-4e38-9b4f-7e8a3e9b4c21",
-    name: "ជា សុជាង",
-    nickname: "សម្លាញ់ សុជាង",
+    id: 6,
+    uuid: "a3c9f2e1-4b7d-4e9c-9a12-6f8b1c2d3e40",
+    name: "លី សុវណ្ណា",
+    nickname: "សម្លាញ់ សុវណ្ណា",
   },
   {
-    id: 2,
-    uuid: "4b9a8f3e-7a9c-4d2b-b1a7-21c91f8d5e11",
-    name: "នី ផានឹត",
-    nickname: "សម្លាញ់ ផានឹត",
+    id: 7,
+    uuid: "b5e1a9d4-2f8c-4a91-8c34-7e9d1a2b3f56",
+    name: "ម៉ៅ រតនា",
+    nickname: "សម្លាញ់ រតនា",
   },
   {
-    id: 3,
-    uuid: "81f5b4cc-9b32-4fda-bc91-3a2e6d4b9f20",
-    name: "ផាត សុថាក់",
-    nickname: "សម្លាញ់ សុថាក់",
+    id: 8,
+    uuid: "c7d2f4a1-9b3e-42c8-9d11-5a6e7f8b2c90",
+    name: "ឈុន វិសាល",
+    nickname: "សម្លាញ់ វិសាល",
   },
   {
-    id: 4,
-    uuid: "d2e41a9c-0d87-4f21-a3cc-12a8b91f7c33",
-    name: "សែន វីរៈ",
-    nickname: "សម្លាញ់ វីរៈ",
+    id: 9,
+    uuid: "d9a8b7c6-5e4f-43a2-9b18-1c2d3e4f5a67",
+    name: "កែវ ចាន់រ័ត្ន",
+    nickname: "សម្លាញ់ ចាន់រ័ត្ន",
   },
   {
-    id: 5,
-    uuid: "f7a1b2d9-6c3f-41b4-9e72-88a9c1d4e520",
-    name: "ហ៊ាន សីហា",
-    nickname: "ប្អូន សីហា",
-  },
+    id: 10,
+    uuid: "e1f2a3b4-5c6d-47e8-9a10-b1c2d3e4f590",
+    name: "ប៊ុន សុភា",
+    nickname: "ប្អូន សុភា",
+  }
 ];
 
 // ======================
