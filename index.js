@@ -1,190 +1,43 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
-const carData = {
-  honda: {
-    i8: {
-      model: "HONDA DUNK ",
-      image:
-        "https://images.khmer24.co/23-12-22/honda-dunk-50cc-2014-2018-45842170322940292070342-b.jpg",
-      price: "900$",
-    },
-    s5: {
-      model: "Honda beat",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "$1500",
-    },
-    x1: {
-      model: "X-ADV 750 ",
-      image:
-        "https://images.khmer24.co/23-12-26/x-adv-750-2021-2022-45842170356044117693961-b.jpg",
-      price: "$16,495",
-    },
-    i8: {
-      model: "HONDA XR230 ",
-      image:"https://images.khmer24.co/23-12-27/honda-xr230-124573170366457460119412-b.jpg",
-      price: "2000$",
-    },
-    s5: {
-      model: "Honda dream 2023",
-      image:
-        "https://images.khmer24.co/23-09-29/honda-dream2024-796016169596382721251826-b.jpg",
-      price: "$2700",
-    },
-    x1: {
-      model: "Super Cup ",
-      image:
-        "https://images.khmer24.co/23-12-27/--868534170366431094304484-b.jpg",
-      price: "$995",
-    },
-  },
-  yamaha: {
-    i8: {
-      model: "Yamaha R6 ",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "1600$",
-    },
-    s5: {
-      model: "YAMAHA N.MAX",
-      image:
-        "https://images.khmer24.co/23-12-27/yamaha-n-max-125cc-from-japan-year-2011-1370-have-id-card-922735170366304462493764-b.jpg",
-      price: "$1500",
-    },
-    x1: {
-      model: "XT 250cc ",
-      image:
-        "https://images.khmer24.co/23-10-01/xt-250cc-224887169614980957178948-b.jpg",
-      price: "$1495",
-    },
-    i8: {
-      model: "MXKING 2019",
-      image:"https://images.khmer24.co/23-12-20/mxking-2019-224887170305997358186586-b.jpg",
-      price: "1500$",
-    },
-    s5: {
-      model: "Yamaha MT150",
-      image:
-        "https://images.khmer24.co/23-12-26/yamaha-mt150-124573170357410298821011-b.jpg",
-      price: "$2900",
-    },
-    x1: {
-      model: "Yamaha R15 ",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "$1500",
-    },
-  },
-};
+import Cors from "cors";
 
-app.use(cors());
-
-app.get("/api/model/all", (req, res) => {
-  res.json({ carData });
+// Initialize CORS middleware
+const cors = Cors({
+  methods: ["GET", "HEAD"],
 });
 
-app.get("/api/moto/:moto", (req, res) => {
-  const { moto } = req.params;
-  if (carData[moto]) {
-    const models = Object.keys(carData[moto]);
-    const cars = models.map((model) => carData[moto][model]);
-    res.json({ cars });
-  } else {
-    res.status(404).json({ error: "not found" });
+const peopleData = [
+  { id: 6, uuid: "a3c9f2e1-4b7d-4e9c-9a12-6f8b1c2d3e40", name: "លី សុវណ្ណា", nickname: "សម្លាញ់ សុវណ្ណា" },
+  { id: 7, uuid: "b5e1a9d4-2f8c-4a91-8c34-7e9d1a2b3f56", name: "ម៉ៅ រតនា", nickname: "សម្លាញ់ រតនា" },
+  { id: 8, uuid: "c7d2f4a1-9b3e-42c8-9d11-5a6e7f8b2c90", name: "ឈុន វិសាល", nickname: "សម្លាញ់ វិសាល" },
+  { id: 9, uuid: "d9a8b7c6-5e4f-43a2-9b18-1c2d3e4f5a67", name: "កែវ ចាន់រ័ត្ន", nickname: "សម្លាញ់ ចាន់រ័ត្ន" },
+  { id: 10, uuid: "e1f2a3b4-5c6d-47e8-9a10-b1c2d3e4f590", name: "ប៊ុន សុភា", nickname: "ប្អូន សុភា" },
+];
+
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) return reject(result);
+      return resolve(result);
+    });
+  });
+}
+
+export default async function handler(req, res) {
+  await runMiddleware(req, res, cors);
+
+  const { id, uuid } = req.query;
+
+  if (id) {
+    const person = peopleData.find((p) => p.id === parseInt(id));
+    if (!person) return res.status(404).json({ success: false, message: "Person not found" });
+    return res.json({ success: true, data: person });
   }
-});
 
-app.get("/api/cars/:car/:model", (req, res) => {
-  const { car, model } = req.params;
-  if (carData[car] && carData[car][model]) {
-    const modelDetails = carData[car][model];
-    res.json({ modelDetails });
-  } else {
-    res.status(404).json({ error: "Not Found" });
+  if (uuid) {
+    const person = peopleData.find((p) => p.uuid === uuid);
+    if (!person) return res.status(404).json({ success: false, message: "Person not found" });
+    return res.json({ success: true, data: person });
   }
-});
 
-app.listen(5000, () => {
-  console.log("Server is running port 5000");
-});
-
-
-change 
-
-const carData = {
-  honda: {
-    i8: {
-      model: "HONDA DUNK ",
-      image:
-        "https://images.khmer24.co/23-12-22/honda-dunk-50cc-2014-2018-45842170322940292070342-b.jpg",
-      price: "900$",
-    },
-    s5: {
-      model: "Honda beat",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "$1500",
-    },
-    x1: {
-      model: "X-ADV 750 ",
-      image:
-        "https://images.khmer24.co/23-12-26/x-adv-750-2021-2022-45842170356044117693961-b.jpg",
-      price: "$16,495",
-    },
-    i8: {
-      model: "HONDA XR230 ",
-      image:"https://images.khmer24.co/23-12-27/honda-xr230-124573170366457460119412-b.jpg",
-      price: "2000$",
-    },
-    s5: {
-      model: "Honda dream 2023",
-      image:
-        "https://images.khmer24.co/23-09-29/honda-dream2024-796016169596382721251826-b.jpg",
-      price: "$2700",
-    },
-    x1: {
-      model: "Super Cup ",
-      image:
-        "https://images.khmer24.co/23-12-27/--868534170366431094304484-b.jpg",
-      price: "$995",
-    },
-  },
-  yamaha: {
-    i8: {
-      model: "Yamaha R6 ",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "1600$",
-    },
-    s5: {
-      model: "YAMAHA N.MAX",
-      image:
-        "https://images.khmer24.co/23-12-27/yamaha-n-max-125cc-from-japan-year-2011-1370-have-id-card-922735170366304462493764-b.jpg",
-      price: "$1500",
-    },
-    x1: {
-      model: "XT 250cc ",
-      image:
-        "https://images.khmer24.co/23-10-01/xt-250cc-224887169614980957178948-b.jpg",
-      price: "$1495",
-    },
-    i8: {
-      model: "MXKING 2019",
-      image:"https://images.khmer24.co/23-12-20/mxking-2019-224887170305997358186586-b.jpg",
-      price: "1500$",
-    },
-    s5: {
-      model: "Yamaha MT150",
-      image:
-        "https://images.khmer24.co/23-12-26/yamaha-mt150-124573170357410298821011-b.jpg",
-      price: "$2900",
-    },
-    x1: {
-      model: "Yamaha R15 ",
-      image:
-        "https://www.khmer24.com/v1.0.2/template/img/loading-placeholder.gif",
-      price: "$1500",
-    },
-  },
-};
+  res.json({ success: true, data: peopleData });
+}
