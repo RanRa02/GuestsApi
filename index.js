@@ -12,7 +12,7 @@ const peopleData = [
   { id: 4, uuid: "c1f9a7e2-6d5a-4fbe-8c2d-5a6e9b3d1f42", name: "ហ៊ាន សុខសាន", nickname: "សម្លាញ់ សុខសាន" },
   { id: 5, uuid: "5e3c9d21-9a4e-4c1b-8b7f-7a1d2e6f4c91", name: "ភាព សុភី", nickname: "សម្លាញ់ភី" },
   { id: 6, uuid: "f6b1c7a9-2e8d-4b33-9d1f-4a8c2e7b5d10", name: "ផល់ ផេង", nickname: "សម្លាញ់ផេង" },
-  { id: 7, uuid: "e2d9f4a7-6b8c-4caa-b5f9-7a3e2d1c6b44", name: "ណាង វតណ្ណេត", nickname: "សម្លាញ់ ណេត" },
+  { id: 7, uuid: "e2d9f4a7-6b8c-4caa-b5f9-7a3e2d1c6b44", name: "ណាង វណ្ណេត", nickname: "សម្លាញ់ វណ្ណេត" },
   { id: 8, uuid: "a9e7c1d4-5b6f-4e9d-9a8c-3d2b7f6a5e31", name: "លាវ វណ្ណី", nickname: "សម្លាញ់ វណ្ណី" },
   { id: 9, uuid: "7c3a2e6b-1f5d-4c9e-a8b4-9e6d2f7a1c55", name: "ញ៉ សេងអាន", nickname: "សម្លាញ់ សេងអាន" },
   { id: 10, uuid: "4f9d7b2c-8a5e-4a91-9c3e-6b1d2f8e7a66", name: "យ៉េត ស្រស់", nickname: "សម្លាញ់ ស្រស់" },
