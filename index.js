@@ -32,7 +32,8 @@ const peopleData = [
   { id: 24, uuid: "9c1b7e5a-4d6f-4a88-8e2c-3f9a7d5b1c10", name: "ហ៊ាន ចិត្រា", nickname: "សម្លាញ់ ចិត្រា" },
   { id: 25, uuid: "4a7d2f6c-9e1b-4c99-8a5e-3d7f1b9c6a21", name: "ជាងនៅ", nickname: "" },
   { id: 26, uuid: "6f2a9e1c-5d7b-4a11-9c8e-7f3b6d5a2c32", name: "គុណវឌ្ឍ", nickname: "" },
-  { id: 27, uuid: "b3e7a5f9-1c2d-4c22-8a6e-9f7d5b1c3a43", name: "vanna rany", nickname: "បងស្រី រ៉ានី និង គ្រួសារ" }
+  { id: 27, uuid: "b3e7a5f9-1c2d-4c22-8a6e-9f7d5b1c3a43", name: "vanna rany", nickname: "បងស្រី រ៉ានី និង គ្រួសារ" },
+  { id: 28, uuid: "a1f3c5d2-7b4e-4d9a-8c2f-1b3e6f9a2d7c", name: "vanna rany", nickname: "កូនចៅ ឃៀក អ៊ាង"}
 ];
 
 
