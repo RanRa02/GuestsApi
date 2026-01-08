@@ -7,7 +7,7 @@ const cors = Cors({
 
 const peopleData = [
   { id: 1, uuid: "9f1c2c9e-9b6b-4e38-9b4f-7e8a3e9b4c21", name: "ជា សុជាង", nickname: "សម្លាញ់ សុជាង" },
-  { id: 2, uuid: "2c7f1e6b-8f44-4a8d-b9c1-1b7d6c7a9f01", name: "នី ផានឹត", nickname: "សម្លាញ់ ផានឹត និង" },
+  { id: 2, uuid: "2c7f1e6b-8f44-4a8d-b9c1-1b7d6c7a9f01", name: "នី ផានឹត", nickname: "សម្លាញ់ ផានឹត និង Honey" },
   { id: 3, uuid: "b8a2c4e9-3a1d-4c77-9e6f-2d5f9c4a6b88", name: "ផាត សុថាក់", nickname: "សម្លាញ់ សុថាក់" },
   { id: 4, uuid: "c1f9a7e2-6d5a-4fbe-8c2d-5a6e9b3d1f42", name: "ហ៊ាន សុខសាន", nickname: "សម្លាញ់ សុខសាន" },
   { id: 5, uuid: "5e3c9d21-9a4e-4c1b-8b7f-7a1d2e6f4c91", name: "ភាព សុភី", nickname: "សម្លាញ់ភី" },
@@ -33,7 +33,7 @@ const peopleData = [
   { id: 25, uuid: "4a7d2f6c-9e1b-4c99-8a5e-3d7f1b9c6a21", name: "ជាងនៅ", nickname: "" },
   { id: 26, uuid: "6f2a9e1c-5d7b-4a11-9c8e-7f3b6d5a2c32", name: "គុណវឌ្ឍ", nickname: "" },
   { id: 27, uuid: "b3e7a5f9-1c2d-4c22-8a6e-9f7d5b1c3a43", name: "vanna rany", nickname: "បងស្រី រ៉ានី និង គ្រួសារ" },
-  { id: 28, uuid: "a1f3c5d2-7b4e-4d9a-8c2f-1b3e6f9a2d7c", name: "vanna rany", nickname: "កូនចៅ ឃៀក អ៊ាង"},
+  { id: 28, uuid: "a1f3c5d2-7b4e-4d9a-8c2f-1b3e6f9a2d7c", name: "កូនចៅ ឃៀក អ៊ាង", nickname: "កូនចៅ ឃៀក អ៊ាង"},
 { id: 27, uuid: "d4e7f2a1-9b3c-4f6d-8e2a-5c1f9b7a3d8e", name: "Saren NaRorng", nickname: "សារ៉ែន ណារ៉ង" }
 ];
 
