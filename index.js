@@ -23,7 +23,7 @@ const peopleData = [
   { id: 15, uuid: "9a5e1d7b-6c4f-4c99-8b2a-7e3d6f1c5a11", name: "យ៉ុន វ៉ាធីក", nickname: "សម្លាញ់ធិក" },
   { id: 16, uuid: "1d7b9e5a-6c4f-4a11-b8e3-5f2d7c6a9e22", name: "ថា បញ្ញា", nickname: "ថា បញ្ញា" },
   { id: 17, uuid: "f5c1e7d9-2a8b-4c66-9d3e-6a4b1f7c5e33", name: "យន សីហា", nickname: "សម្លាញ់ សីហា" },
-  { id: 18, uuid: "a8b7c5f1-9e4d-4a22-b6e3-1c5d7f9e8a44", name: "ហ៊ាន តឿន", nickname: "សម្លាញ់ តឿន" },
+  { id: 18, uuid: "a8b7c5f1-9e4d-4a22-b6e3-1c5d7f9e8a44", name: "ហាន តឿន", nickname: "សម្លាញ់ តឿន" },
   { id: 19, uuid: "e4d2c7a9-1f6b-4e88-9c5a-7f3b1d6e2a55", name: "ចេន ជួរ", nickname: "សម្លាញ់ ជួរ" },
   { id: 20, uuid: "7a9d5c4e-1b6f-4c44-9e8a-2f3d6b1c7a66", name: "ហ៊ួ ធារ៉ា", nickname: "សម្លាញ់ ធារ៉ា" },
   { id: 21, uuid: "c6a1f9d2-7e5b-4a55-8c3e-9d1b7f6a5e77", name: "ហ៊ាន វិសាល", nickname: "សម្លាញ់ វិសាល" },
