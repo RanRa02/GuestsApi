@@ -39,7 +39,7 @@ const peopleData = [
   { id: 30, uuid: "b9e4c1d7-6a2f-4e8b-9c5a-3d1f7e6a2b8c", name: "Rath Õver", nickname: "Rath Õver និង ភរិយា"},
   { id: 31, uuid: "3f7c9a2e-6c4b-4f91-9d8a-2e5c1b7a9d44", name: "អាប្អូនបូ នឹង Honey", nickname: "អាប្អូនបូ នឹង Honey"},
   { id: 32, uuid: "e7b1c3a9-2d5f-4e8a-9c6b-d4a1f2e8c7b3", name: "បងវិត នឹង Honey", nickname: "បងវិត នឹង Honey"},
-  { id: 33, uuid: "a3f8c9e2-6b4d-4a7c-9e1f-5d2b8c6a7f1e", name: "ស៊ាងម៉េងស៊ឺ", nickname: "ស៊ាងម៉េងស៊ឺ"}
+  { id: 33, uuid: "a3f8c9e2-6b4d-4a7c-9e1f-5d2b8c6a7f1e", name: "ស៊ាង ម៉េងស៊ឺ", nickname: "ស៊ាង ម៉េងស៊ឺ"}
 ];
 
 
