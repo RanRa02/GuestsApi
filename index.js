@@ -16,7 +16,7 @@ const peopleData = [
   { id: 8, uuid: "a9e7c1d4-5b6f-4e9d-9a8c-3d2b7f6a5e31", name: "លាវ វណ្ណី", nickname: "សម្លាញ់ វណ្ណី" },
   { id: 9, uuid: "7c3a2e6b-1f5d-4c9e-a8b4-9e6d2f7a1c55", name: "ញ៉ សេងអាន", nickname: "សម្លាញ់ សេងអាន" },
   { id: 10, uuid: "4f9d7b2c-8a5e-4a91-9c3e-6b1d2f8e7a66", name: "យ៉េត ស្រស់", nickname: "សម្លាញ់ ស្រស់" },
-  { id: 11, uuid: "d1a6c9e5-2f8b-4e33-b9d7-5c4a7f1e8a77", name: "ជីវ៉ា ម៉េងអី", nickname: "សម្លាញ់ជីរ៉ា និង ប្អូនអី" },
+  { id: 11, uuid: "d1a6c9e5-2f8b-4e33-b9d7-5c4a7f1e8a77", name: "ជីវ៉ា ម៉េងអី", nickname: "សម្លាញ់ជីរ៉ា និង ប្អូនម៉េងអី" },
   { id: 12, uuid: "8b4e1f9d-6a5c-4c77-a3e9-2d7b6f5c1a88", name: "ខេងសុម៉េង", nickname: "សម្លាញ់ម៉េង និង ភរិយា" },
   { id: 13, uuid: "3e9f6a5-1c2d-4b88-9f7a-8e5d1c4a6b99", name: "ធា សុធី", nickname: "សម្លាញ់ ធី" },
   { id: 14, uuid: "6c2f8a9e-4b1d-4e77-9a5c-3d6f1b7e5a10", name: "ឡេង ម៉េងហ៊ុង", nickname: "ឡេង ម៉េងហ៊ុង" },
